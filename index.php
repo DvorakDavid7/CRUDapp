@@ -21,6 +21,10 @@ $app = new Application();
 
 $app->router->get("/", [HomeController::class, "home"]);
 
-$app->router->post("/getData", [HomeController::class, "getData"]);
+$app->router->get("/api/getData", [HomeController::class, "getData"]);
+
+$app->router->post("/api/addRecord", [HomeController::class, "addRecord"]);
+
+$app->router->delete("/api/deleteRecord", [HomeController::class, "deleteRecord"]);
 
 $app->run();

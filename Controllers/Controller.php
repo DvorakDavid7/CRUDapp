@@ -3,6 +3,7 @@
 
 class Controller
 {
+
     /**
      * render provided view from views folder in root of the project
      * @param string $view name of the view
