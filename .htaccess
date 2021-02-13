@@ -1,0 +1,6 @@
+RewriteEngine on
+Options -Indexes
+
+RewriteRule !\.(css|js|icon|zip|rar|png|jpg|gif|pdf)$ index.php [L,QSA]
+
+AddType application/x-httpd-php .php .phtml
