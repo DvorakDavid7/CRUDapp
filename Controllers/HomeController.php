@@ -23,7 +23,13 @@ class HomeController extends Controller
         $sqlResult = $customersTable->selectAll();
 
         while ($row = mysqli_fetch_assoc($sqlResult)) {
-            array_push($result["data"], $row);
+            array_push($result["data"], utf8_encode($row["id"]));
+            array_push($result["data"], utf8_encode($row["FirstName"]));
+            array_push($result["data"], utf8_encode($row["LastName"]));
+            array_push($result["data"], utf8_encode($row["Email"]));
+            array_push($result["data"], utf8_encode($row["Phone"]));
+            array_push($result["data"], utf8_encode($row["Location"]));
+            array_push($result["data"], utf8_encode($row["Project"]));
         }
         self::sendJson($result);
     }
