@@ -33,23 +33,44 @@ class HomeController extends Controller
         $body = $request->getBody();
         $data = $body["record"];
 
-        $customer = new CustomerModel();
-        $customer->setFirstName($data["firstName"]);
-        $customer->setLastName($data["lastName"]);
-        $customer->setEmail($data["email"]);
-        $customer->setPhone($data["phone"]);
-        $customer->setLocation($data["location"]);
-        $customer->setProject($data["project"]);
+        $customer = new CustomerModel(
+            $data["firstName"],
+            $data["lastName"],
+            $data["email"],
+            $data["phone"],
+            $data["location"],
+            $data["project"]
+        );
 
         $customerTable = new CustomersTable();
         $customerTable->insert($customer);
     }
 
-    public function deleteRecord(Request $request) {
+    public function deleteRecord(Request $request)
+    {
         $body = $request->getBody();
         $customerId = $body["id"];
 
         $customerTable = new CustomersTable();
         $customerTable->deleteCustomer($customerId);
+    }
+
+
+    public function updateRecord(Request $request)
+    {
+        $body = $request->getBody();
+        $recordId = $body["id"];
+        $data = $body["updatedValue"];
+
+        $customer = new CustomerModel(
+            $data["firstName"],
+            $data["lastName"],
+            $data["email"],
+            $data["phone"],
+            $data["location"],
+            $data["project"]
+        );
+        $customerTable = new CustomersTable();
+        $customerTable->updateCustomer($recordId, $customer);
     }
 }

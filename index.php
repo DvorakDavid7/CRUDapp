@@ -30,4 +30,6 @@ $app->router->post("/api/addRecord", [HomeController::class, "addRecord"]);
 
 $app->router->delete("/api/deleteRecord", [HomeController::class, "deleteRecord"]);
 
+$app->router->put("/api/updateRecord", [HomeController::class, "updateRecord"]);
+
 $app->run();
