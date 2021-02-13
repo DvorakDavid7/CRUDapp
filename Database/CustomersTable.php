@@ -35,4 +35,20 @@ class CustomersTable extends DatabaseHandler
             echo "Error in deleting data\n";
         }
     }
+
+    public function updateCustomer(int $id, CustomerModel $customer) {
+        $sql = "
+            UPDATE Customers
+            SET FirstName = \"$customer->firstName\",
+                LastName = \"$customer->lastName\",
+                Email = \"$customer->email\",
+                Phone = \"$customer->phone\",
+                Location = \"$customer->location\",
+                Project = \"$customer->project\"
+            WHERE id = $id;
+        ";
+        if (!$this->connection->query($sql)) {
+            echo "Error in deleting data\n";
+        }
+    }
 }
