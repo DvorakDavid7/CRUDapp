@@ -26,6 +26,6 @@ class Application
             http_response_code(404);
             exit();
         }
-        call_user_func($callback);
+        call_user_func($callback, $this->request);
     }
 }
