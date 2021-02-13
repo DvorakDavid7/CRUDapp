@@ -4,9 +4,9 @@
 class Request
 {
 
-    private string $method;
-    private string $path;
-    private array $body;
+    private $method;
+    private $path;
+    private $body;
 
 
     public function __construct()

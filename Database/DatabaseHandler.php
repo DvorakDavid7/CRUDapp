@@ -3,11 +3,11 @@
 
 class DatabaseHandler
 {
-    private string $hostname = "localhost";
-    private string $username = "user";
-    private string $password = "passwd123";
-    private string $database = "CrudAppDb";
-    protected mysqli $connection;
+    private $hostname = "localhost";
+    private $username = "user";
+    private $password = "passwd123";
+    private $database = "CrudAppDb";
+    protected $connection;
 
 
     public function __construct()

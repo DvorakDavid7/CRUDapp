@@ -3,12 +3,12 @@
 
 class CustomerModel
 {
-    public string $firstName;
-    public string $lastName;
-    public string $email;
-    public string $phone;
-    public string $location;
-    public string $project;
+    public $firstName;
+    public $lastName;
+    public $email;
+    public $phone;
+    public $location;
+    public $project;
 
 
     public function setFirstName(string $firstName): void

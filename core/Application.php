@@ -6,8 +6,8 @@ require "Request.php";
 
 class Application
 {
-    public Router $router;
-    public Request $request;
+    public $router;
+    public $request;
 
     public function __construct()
     {

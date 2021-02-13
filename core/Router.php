@@ -3,7 +3,7 @@
 
 class Router
 {
-    public array $register;
+    public $register;
 
 
     public function post(string $path, $callback)
