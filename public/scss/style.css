@@ -1,0 +1,24 @@
+.navbar-brand {
+  position: absolute;
+  width: 100%;
+  max-width: 100px;
+  top: 10px;
+  left: 50%;
+}
+
+.crud-table {
+  max-width: 50%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+#btn-edit {
+  background-color: green;
+  border: none !important;
+}
+
+#btn-delete {
+  background-color: red;
+  border: none !important;
+}
+/*# sourceMappingURL=style.css.map */
