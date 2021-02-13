@@ -17,6 +17,9 @@ spl_autoload_register(function ($class) {
 });
 
 
+// Enable CORS
+header("Access-Control-Allow-Origin: *");
+
 $app = new Application();
 
 $app->router->get("/", [HomeController::class, "home"]);
