@@ -28,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 header('Access-Control-Allow-Origin: *');
-header('Content-Type: application/json');
 
 
 $app = new Application();
