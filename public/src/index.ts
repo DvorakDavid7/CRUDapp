@@ -162,6 +162,7 @@ async function postData() {
         method: 'POST',
         body: JSON.stringify(body)
     }
+    table.innerHTML = "";
     const response = await fetch("http://13.80.117.237/api/addRecord", options);
 }
 

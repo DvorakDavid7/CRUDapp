@@ -224,6 +224,7 @@ function postData() {
                         method: 'POST',
                         body: JSON.stringify(body)
                     };
+                    table.innerHTML = "";
                     return [4 /*yield*/, fetch("http://13.80.117.237/api/addRecord", options)];
                 case 1:
                     response = _a.sent();
