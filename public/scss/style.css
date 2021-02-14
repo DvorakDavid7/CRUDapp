@@ -12,18 +12,26 @@
   margin-top: 5%;
 }
 
-#btn-edit {
+.btn-edit {
   background-color: green;
   border: none !important;
 }
 
-#btn-delete {
+.btn-delete {
   background-color: red;
   border: none !important;
+  margin-left: 5px;
 }
 
-#btn-new {
-  background-color: darkgreen;
+.btn-save {
+  background-color: green;
   border: none !important;
+  margin-left: 5px;
+}
+
+input {
+  width: 70px;
+  height: 20px;
+  padding: 0 !important;
 }
 /*# sourceMappingURL=style.css.map */
